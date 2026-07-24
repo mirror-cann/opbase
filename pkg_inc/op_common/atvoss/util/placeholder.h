@@ -15,6 +15,7 @@
 #ifndef UTIL_PLACEHOLDER_H_
 #define UTIL_PLACEHOLDER_H_
 
+#include <cstddef>
 #include <cstdint>
 #ifndef __CCE_AICORE__
 #define __aicore__

@@ -19,6 +19,7 @@
 #define __aicore__
 #endif
 
+#include <cstddef>
 #include "aux2.h"
 namespace Ops {
 namespace Base {

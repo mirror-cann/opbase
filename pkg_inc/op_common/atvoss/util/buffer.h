@@ -15,6 +15,7 @@
 #ifndef UTIL_BUFFER_H_
 #define UTIL_BUFFER_H_
 
+#include <cstddef>
 namespace Ops {
 namespace Base {
 enum class MemLevel : uint8_t {
@@ -199,8 +200,8 @@ struct DecodeBufferIdWithPos {
 
 template <int BufferId>
 struct CombinedBufferCount {
-    const static uint32_t tmp = static_cast<uint32_t>(BufferId) >> (BUF_COMBINE_SHIFT * BUF_COMBINED_MAX) &
-                                BUF_COMBINE_MASK;
+    const static uint32_t tmp =
+        static_cast<uint32_t>(BufferId) >> (BUF_COMBINE_SHIFT * BUF_COMBINED_MAX) & BUF_COMBINE_MASK;
     constexpr static uint32_t Value = (tmp == 0 || tmp > BUF_COMBINED_MAX) ? 1 : tmp;
 };
 
